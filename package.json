@@ -1,0 +1,19 @@
+{
+  "name": "back-end-wrap",
+  "version": "1.0.0",
+  "description": "\"Backend technologies\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unwraptech/back-end-wrap.git"
+  },
+  "author": "Manish Gandotra , Deepika Mahajan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unwraptech/back-end-wrap/issues"
+  },
+  "homepage": "https://github.com/unwraptech/back-end-wrap#readme"
+}
