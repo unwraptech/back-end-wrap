@@ -33,12 +33,15 @@ const tablets = require('./routes/tablets');
 const files = require('./routes/files');
 const watches = require('./routes/watches');
 const upload = require('./routes/upload');
+const user = require('./routes/user');
 
 app.use('/upload', upload);
 app.use('/mobiles', mobiles);
 app.use('/tablets', tablets);
 app.use('/files', files);
-app.use('/watches', watches)
+app.use('/watches', watches);
+app.use('/user', user)
+
 app.listen(process.env.PORT | 4000)
 
 
