@@ -15,5 +15,17 @@ router.post("/authenticate", function (req, res) {
       }
       });
 });
-
+router.get("/getUsers/:id", function (req, res) { 
+  const authenticate_sql ="call getUsers("+req.params.id+")"
+  con.query(authenticate_sql, function (err, result) {
+      
+    if (err){
+        console.log('err', err);
+        
+      res.status(400).json({error:'Some error occured please try again later'})
+    }else {
+      res.json({message:result[0]})
+    }
+    });
+});
 module.exports = router;

@@ -53,4 +53,21 @@ router.get("/get-mobile-by-brand/:brand", function (req, res) {
     }
     });
 });
+router.post("/get-mobile-devices", function (req, res) { 
+  console.log(req.body);
+  
+  const searchmobile_SQL ="call getAllDevices('"+req.body.noofrecords+"','"+req.body.page+"','"+req.body.type+"')"
+
+  con.query(searchmobile_SQL, function (err, result) {
+    console.log(result);
+    
+    if (err){
+      console.log(err);
+      
+      res.status(400).json({error:'Some error occured please try again later'})
+    }else {
+      res.json({devices:result[0]})
+    }
+    });
+});
 module.exports = router;
